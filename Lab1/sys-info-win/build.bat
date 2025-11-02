@@ -7,10 +7,4 @@ if not exist "build" (
 echo Building for x86_64 (64-bit Intel/AMD)...
 g++ ./src/main.cpp -std=c++17 -O2 -DNDEBUG -s -static -static-libgcc -static-libstdc++ -o ./build/sys-info-win-x86_64.exe
 
-echo Building for x86 (32-bit Intel/AMD)...
-g++ ./src/main.cpp -std=c++17 -O2 -DNDEBUG -s -static -static-libgcc -static-libstdc++ -m32 -o ./build/sys-info-win-x86.exe
-
-echo Building for ARM64 (64-bit ARM)...
-aarch64-w64-mingw32-g++ ./src/main.cpp -std=c++17 -O2 -DNDEBUG -s -static -static-libgcc -static-libstdc++ -o ./build/sys-info-win-arm64.exe
-
 echo Done!
